@@ -2,7 +2,7 @@ function isEmpty
 {
   if [ -z "$1" ]
   then
-    echo "Not found untagged images"
+    echo "No untagged images found"
     exit 0
   fi
 }
