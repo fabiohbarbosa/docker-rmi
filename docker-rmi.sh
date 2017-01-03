@@ -1,3 +1,4 @@
+#!/bin/bash
 function isEmpty
 {
   if [ -z "$1" ]
