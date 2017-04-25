@@ -1,3 +1,4 @@
+#!/bin/bash
 function isEmpty
 {
   if [ -z "$1" ]
@@ -13,9 +14,12 @@ isEmpty $IMAGES_ID
 
 for IMG in $IMAGES_ID
 do
+  echo "Removing image $IMG"
   CONTAINER_ID=$(docker ps -a | grep "$IMG" | awk '{print $1}')
-  docker stop $CONTAINER_ID
-  docker rm $CONTAINER_ID
+  if [ -n "$1" ]
+  then
+    docker stop $CONTAINER_ID
+    docker rm $CONTAINER_ID
+  fi
+  docker rmi $IMG
 done
-
-docker rmi $IMAGES_ID
