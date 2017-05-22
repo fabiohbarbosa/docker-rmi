@@ -16,7 +16,8 @@ for IMG in $IMAGES_ID
 do
   echo "Removing image $IMG"
   CONTAINER_ID=$(docker ps -a | grep "$IMG" | awk '{print $1}')
-  if [ -n "$1" ]
+
+  if [ -n "$CONTAINER_ID" ]
   then
     docker stop $CONTAINER_ID
     docker rm $CONTAINER_ID
