@@ -8,7 +8,7 @@ function isEmpty
   fi
 }
 
-IMAGES_ID=$(docker images | grep "^<none>" | awk '{print $3}')
+IMAGES_ID=$(docker images | grep "<none>" | awk '{print $3}')
 
 isEmpty $IMAGES_ID
 
