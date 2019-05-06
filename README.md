@@ -3,7 +3,7 @@
 
 ## Clone this repository
 ```sh
-git clone git@github.com:fabiohbarbosa/docker-rmi.git /opt/docker-rmi
+git clone https://github.com/fabiohbarbosa/docker-rmi.git /opt/docker-rmi
 ```
 
 ## Creating binary
